@@ -1,0 +1,22 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.not_found{
+    margin-left:100px;
+}
+.logo{
+    width: 7%;
+    height:7%;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: contains;
+}
+.admin_image{
+    width:60px;
+    object-fit:contain;
+}

@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgba(243, 148, 148, 0.906);
+}
+.logo{
+    width:7%;
+    height:7%;
+}
+.about-1
+{
+    margin: 30px;
+    padding: 5px;
+}
+.about-1 h1{
+text-align: center;
+color: black;
+font-weight: bold;
+}
+.about-1 p{
+    text-align: center;
+    padding:3px;
+    color:#fff;
+}
+.about-item{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: white;
+    padding: 80px,30px;
+    box-shadow: 0 0 9px rgba(215, 98, 98, 0.884);
+}
+.about-item i{
+    font-size: 43px;
+    margin: 0px;
+    
+}
+.about-item h3{
+    font-size: 25px;
+    margin-bottom:10px;
+}
+.about-item hr{
+    width: 46px;
+    height: 3px ;
+    background-color: #5fbff9;
+    margin: 0 auto;
+    border: none;
+}
+.about-item p{
+    margin-top: 10px;
+    padding: 20px;
+}
+.about-item:hover{
+    background-color: skyblue;
+}
+.about-item:hover i,
+.about-item:hover h3,
+.about-item:hover p{
+    color:#fff;
+}
+.about-item:hover hr{
+    background-color: #fff;
+    text-align: center;
+}
+.about-item:hover i{
+    transform: translateY(-20px);
+}
+.about-item:hover i,
+.about-item:hover h3,
+.about-item:hover hr{
+    transition: all 400ms ease-in-out;
+}
+.footer{
+    margin: 20px 0;
+    text-align: center;
+}
+.footer a{
+    text-decoration: none;
+    color:rgb(41, 0, 153);
+    font-size: 22px;
+    margin-left: 20px;
+}
+.footer hr{
+    background: #141111;
+    height: 1px;
+    width: 100%;
+    border: 0;
+    margin: 10px 0;
+}
+.footer .text-center p{
+    padding-bottom: 10px;
+}

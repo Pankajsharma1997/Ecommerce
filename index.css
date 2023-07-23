@@ -1,0 +1,76 @@
+header{
+    text-align: center;
+    color:rgb(165, 219, 95);
+    height:70px;
+    padding-top: 20px; 
+    background: url(./Images/contact\ bg.jpg);
+
+}
+
+
+
+
+/* nav logo */
+.logo{
+    width:7%;
+    height:7%;
+}
+
+.register-btn{
+    margin-right:30px;
+    padding:7px;
+    border-radius: 50%;
+    background: linear-gradient(to left,#cfe3eb,#eae2e5);
+    color: black;
+    border-style: solid;
+    width:130px; 
+}
+.register-btn:hover{
+    background: linear-gradient(-135deg, #647178, #14021c);
+    color: white;
+
+}
+.login-btn{
+    margin-right:40px;
+    padding:7px;
+    border-radius: 50%;
+    background: linear-gradient(to left,#cfe3eb,#eae2e5);
+    color: black;
+    border-style: solid;
+    width:130px; 
+
+}
+.login-btn:hover{
+    background: linear-gradient(-135deg, #647178, #14021c);
+    color: white;
+}
+
+/* body section  */
+.card-header{
+    text-align:center;
+    color: red;
+    font-style: italic;
+}
+
+/* first card product section */
+.text-format {
+    text-align: justify;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: large;
+}
+
+/* Three cards */
+.card{
+    margin:23px;
+}
+
+.footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  
