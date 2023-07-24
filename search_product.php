@@ -54,7 +54,11 @@ include('functions/common_function.php');
 
 <!--  Add to cart link-->
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i><sup> 1</sub></a>
+        <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping">
+       </i><sup> <!-- copy cart items funciton -->
+          <?php
+          cart_item();
+        ?></sub></a>
       </li>
 
 <!-- Total Price link -->
@@ -89,6 +93,10 @@ include('functions/common_function.php');
   <p class="text-center">Mission Dhanwantri- Empowerment of Women Through Herbs </p>
  </div>
 
+ <!-- calling cart function  -->
+   <?php
+    cart();
+    ?>
  <!-- fourth child -->
  <div class="row px-2">
     <div class="col-md-10"> 

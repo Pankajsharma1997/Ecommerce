@@ -29,7 +29,7 @@
            <div class='card-body'>
           <h5 class='card-title'>$product_title</h5>
             <p class='card-text'> $product_description   </p>
-           <a href='#' class='btn btn-info'> Add to cart</a>
+           <a href='product.php?add_to_cart=$product_id' class='btn btn-info'> Add to cart</a>
            <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'> View more</a>
          </div>
        </div>
@@ -107,7 +107,7 @@ function get_unique_categories()
            <div class='card-body'>
           <h5 class='card-title'>$product_title</h5>
             <p class='card-text'> $product_description   </p>
-           <a href='#' class='btn btn-info'> Add to cart</a>
+            <a href='product.php?add_to_cart=$product_id' class='btn btn-info'> Add to cart</a>
            <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'> View more</a>
          </div>
        </div>
@@ -148,7 +148,7 @@ function get_unique_SHG()
            <div class='card-body'>
           <h5 class='card-title'>$product_title</h5>
             <p class='card-text'> $product_description   </p>
-           <a href='#' class='btn btn-info'> Add to cart</a>
+            <a href='product.php?add_to_cart=$product_id' class='btn btn-info'> Add to cart</a>
            <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'> View more</a>
          </div>
        </div>
@@ -214,7 +214,7 @@ if(isset($_GET['search_data_product'])){
            <div class='card-body'>
           <h5 class='card-title'>$product_title</h5>
             <p class='card-text'> $product_description   </p>
-           <a href='#' class='btn btn-info'> Add to cart</a>
+            <a href='product.php?add_to_cart=$product_id' class='btn btn-info'> Add to cart</a>
            <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'> View more</a>
          </div>
        </div>
@@ -223,7 +223,7 @@ if(isset($_GET['search_data_product'])){
 
  }
 }
- // view detail function
+ // view more button detail function
  function view_details(){
   global $con;
 
@@ -255,8 +255,8 @@ if(isset($_GET['search_data_product'])){
            <div class='card-body'>
           <h5 class='card-title'>$product_title</h5>
             <p class='card-text'> $product_description   </p>
-           <a href='#' class='btn btn-info'> Add to cart</a>
-           <a href='product_details.php?product_id=$product_id' class='btn btn-secondary'> View more</a>
+            <a href='product.php?add_to_cart=$product_id' class='btn btn-info'> Add to cart</a>
+           <a href='product.php' class='btn btn-secondary'> Go Home </a>
          </div>
        </div>
        </div>
@@ -302,5 +302,48 @@ function getIPAddress() {
 }  
 // $ip = getIPAddress();  
 // echo 'User Real IP Address - '.$ip;  
+
+// cart function 
+function cart(){
+if(isset($_GET['add_to_cart'])){
+  global $con;
+  $get_ip_address=getIPAddress(); 
+  $get_product_id=$_GET['add_to_cart'];
+  $select_query="select * from `cart_details` where ip_address= '$get_ip_address' and product_id= $get_product_id";
+  $result_query=mysqli_query($con,$select_query);
+  $num_of_rows=mysqli_num_rows($result_query);
+  if($num_of_rows>0){
+    echo"<script> alert(' This Item is already present inside the cart')</script>"; 
+    echo"<script> window.open('product.php','_self')</script>";
+  }
+  else{
+    $insert_query="insert into `cart_details`(product_id,ip_address,quantity)values($get_product_id,'$get_ip_address',0)";
+    $result_query=mysqli_query($con,$insert_query);
+    echo"<script> alert(' This Item is sucessfully added to cart')</script>"; 
+    echo"<script> window.open('product.php','_self')</script>";
+  }
+}
+}
+
+//function to get cart item numbers 
+function cart_item(){
+  if(isset($_GET['add_to_cart'])){
+    global $con;
+    $get_ip_address=getIPAddress(); 
+    
+    $select_query="select * from `cart_details` where ip_address= '$get_ip_address'";
+    $result_query=mysqli_query($con,$select_query);
+    $count_cart_items=mysqli_num_rows($result_query);
+  }
+    else{
+      global $con;
+    $get_ip_address=getIPAddress(); 
+    
+    $select_query="select * from `cart_details` where ip_address= '$get_ip_address'";
+    $result_query=mysqli_query($con,$select_query);
+    $count_cart_items=mysqli_num_rows($result_query);
+    }
+    echo$count_cart_items;
+  }
 
 ?>

@@ -54,7 +54,13 @@ include('functions/common_function.php');
 
 <!--  Add to cart link-->
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"></i><sup> 1</sub></a>
+        <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping">
+        </i><sup>
+          <!-- copy cart items funciton -->
+          <?php
+          cart_item();
+        ?>
+        </sup></a>
       </li>
 
 <!-- Total Price link -->
@@ -70,6 +76,11 @@ include('functions/common_function.php');
     </form>
   </div>
 </nav>
+
+<!-- calling cart function -->
+<?php
+cart();
+?>
 
 <!-- second child -->
 <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
