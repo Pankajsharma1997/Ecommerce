@@ -244,11 +244,9 @@ if(isset($_GET['search_data_product'])){
           $product_image1=$row['product_image1'];
           $product_image2=$row['product_image2']; 
           $product_image3=$row['product_image3'];
-
           $product_price=$row['product_price'];
           $category_id=$row['category_id'];
           $SHG_id=$row['SHG_id'];
-
           echo" <div class='col-md-4 mb-3'>
         <div class='card'>
         <img src='./admin/product_images/$product_image1' class='card-img-top' alt='$product_title'>
@@ -265,12 +263,9 @@ if(isset($_GET['search_data_product'])){
                 <div class='col-md-12'>
               <h4 class='text-center text-danger mb-5'> Related Products </h4> 
                 </div>
-
-          
                 <div class='col-md-6'> 
                 <img src='./admin/product_images/$product_image2' class='card-img-top' alt='Product Image'>
                 </div>
-
                 <div class='col-md-6'> 
                 <img src='./admin/product_images/$product_image3' class='card-img-top' alt='Product Image'>  
                 </div>
@@ -281,7 +276,6 @@ if(isset($_GET['search_data_product'])){
  }
 }
  }
-
 }
 
 // get Ip address function

@@ -84,8 +84,7 @@ include('functions/common_function.php');
    <li class="nav item">
     <a class="nav-link text-light" href="#">Login</a> 
    </li>
-   
-  </ul>
+    </ul>
 </nav>
 
  <!-- third child -->
