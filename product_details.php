@@ -137,7 +137,6 @@ include('functions/common_function.php');
     ?> 
   </ul>
        </div>
-
 </div>
 
   <!--  include footer -->
